@@ -1,0 +1,202 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@import "flat-ui.less";
+
+body {
+	font-size: 16px;
+	line-height: (26/16em);
+	font-family: @font-family-base;
+	color: @text-color;
+}
+
+.navbar {
+	background: #fff;
+	min-height: (51/16em);
+	box-shadow: 0px 0px (7.5/16em) rgba(0, 0, 0, 0.5);
+	.navbar-header {
+		position: relative;
+		.navbar-brand {
+			padding: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 16px;
+			img {
+				max-height: (78/16em);
+			}
+		}
+	}
+}
+.jumbotron {
+	font-size: 16px;
+	padding: (130/16em) 0 (104/16em) 0;
+	margin: 0;
+	position: relative;
+	h1, p {
+		font-family: "adobe-garamond-pro";
+		display: inline;
+		font-size: 68px;
+		line-height: (78/68em);
+		font-weight: 400;
+		margin: 0;
+		span {
+			color: @brand-secondary;
+		}
+	}
+	.skip {
+		font-size: 16px;
+		line-height: (26/16em);
+		text-align: center;
+		padding: (16/16em) (19/16em) (10/16em) (17/16em);
+		position: absolute;
+		right: 0;
+		bottom: (-130/16em);
+		z-index: 2;
+	}
+}
+.hero {
+	.item {
+		font-size: 16px;
+		max-height: (728/16em);
+		overflow: hidden;
+		img {
+			width: 100%;
+		}
+	}
+}
+.consulting, .experience-design, .teaser, .about {
+	padding: (26/16em) 0;
+	h2 {
+		font-family: "franklin-gothic-urw";
+		text-transform: uppercase;
+		font-size: 16px;
+		line-height: (26/16em);
+		font-weight: 400;
+		color: @carrot;
+		margin: (26/16em) 0;
+		a {
+			color: @carrot;
+		}
+	}
+	p {
+		font-family: "adobe-garamond-pro";
+		display: inline;
+		font-size: 68px;
+		line-height: (78/68em);
+		font-weight: 400;
+		margin: 0;
+		span {
+			color: @brand-secondary;
+		}
+		.btn {
+			font-family: "franklin-gothic-urw";
+			font-size: 13px;
+			line-height: (26/13em);
+			padding: (13/13em);
+			text-transform: uppercase;
+		}
+	}
+	.service-item, .value {
+		.svg-wrapper {
+			min-height: (130/16em);
+		}
+		svg {
+			display: block;
+			margin: 0 auto;
+		}
+		h3 {
+			font-family: "adobe-garamond-pro";
+			font-style: italic;
+			font-size: 20px;
+			line-height: (26/20em);
+			margin: 0;
+			font-weight: 400;
+		}
+		p {
+			font-family: "franklin-gothic-urw";
+			font-size: 16px;
+			line-height: (26/16em);
+			margin: 0 0 (26/16em) 0;
+			display: block;
+		}
+	}
+}
+.consulting, .about {
+	background: #eee;
+}
+.experience-design {
+	background: @brand-primary;
+	color: #fff;
+	img {
+		width: 100%;
+	}
+	p {
+		margin: (26/68em) 0;
+		display: block;
+	}
+	.list {
+		padding: 0;
+		margin-bottom: (26/16em);
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			li {
+				font-size: 26px;
+				line-height: (26/26em);
+				height: (26/26em);
+				margin-bottom: (13/26em);
+				i {
+					font-size: 13px;
+					line-height: (26/13em);
+					top: -2px;
+					color: @brand-secondary;
+				}
+			}
+		}
+	}
+}
+.teaser {
+	background: @brand-secondary;
+	color: #fff;
+	a {
+		background: @carrot;
+	}
+}
+nav {
+	.navbar-nav {
+		> li {
+			> a {
+				font-size: 13px;
+				line-height: (26/13em);
+				padding: (13/13em) (13/13em) (9/13em) (13/13em);
+				border-bottom: (4/13em) solid transparent;
+				text-transform: uppercase;
+				font-family: "franklin-gothic-urw";
+				font-weight: 400;
+				&:hover {
+					color: @carrot;
+					border-bottom: (4/13em) solid @carrot;
+				}
+			}
+		}
+	}
+}
+footer {
+	font-size: 16px;
+	line-height: (26/16em);
+	background: @brand-primary;
+	color: #fff;
+	padding: (26/16em) 0;
+	p {
+		margin: (26/16em) 0;
+	}
+	.mail {
+		font-size: 16px;
+		line-height: (26/16em);
+		text-align: center;
+		padding: (16/16em) (19/16em) (10/16em) (17/16em);
+		position: absolute;
+		top: (-52/16em);
+		z-index: 2;
+	}
+}
