@@ -1,3 +1,5 @@
+@import "variables";
+@import "mixins";
 @import "../bower_components/bootstrap/less/bootstrap.less";
 @import "flat-ui.less";
 
@@ -6,20 +8,31 @@ body {
 	line-height: (26/16em);
 	font-family: @font-family-base;
 	color: @text-color;
+    width: 100vw;
+    overflow-y: hidden;
+    > .ng-scope {
+        width: 100vw;
+        overflow-x: hidden;
+    }
 }
 
 .navbar {
 	background: #fff;
 	min-height: (51/16em);
-	box-shadow: 0px 0px (7.5/16em) rgba(0, 0, 0, 0.5);
 	.navbar-header {
 		position: relative;
 		.navbar-brand {
 			padding: 0;
 			position: absolute;
 			top: 0;
-			left: 0;
 			font-size: 16px;
+      &.clever {
+        left: 36px;
+        @media (max-width: @screen-md-min) {
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+      }
 			img {
 				max-height: (78/16em);
 			}
@@ -98,6 +111,7 @@ body {
 	.service-item, .value {
 		.svg-wrapper {
 			min-height: (130/16em);
+      text-align: center;
 		}
 		svg {
 			display: block;
@@ -124,7 +138,7 @@ body {
 	background: #eee;
 }
 .experience-design {
-	background: @brand-primary;
+	background: @wet-asphalt;
 	color: #fff;
 	img {
 		width: 100%;
@@ -187,6 +201,12 @@ footer {
 	background: @brand-primary;
 	color: #fff;
 	padding: (26/16em) 0;
+  &.row {
+    background-color: @wet-asphalt;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    position: relative;
+  }
 	p {
 		margin: (26/16em) 0;
 	}
@@ -196,7 +216,57 @@ footer {
 		text-align: center;
 		padding: (16/16em) (19/16em) (10/16em) (17/16em);
 		position: absolute;
-		top: (-52/16em);
+		top: -52px;
 		z-index: 2;
+    transform: translate(-50%, 0);
 	}
+}
+@media (max-width: @screen-sm-min) {
+  .jumbotron {
+    padding: 104px 0 26px 0;
+    h1, p {
+      font-size: 34px;
+      line-height: 52px;
+    }
+    .skip {
+      bottom: -52px;
+    }
+  }
+  .consulting, .experience-design, .teaser, .about {
+    p {
+      font-size: 34px;
+      line-height: 52px;
+    }
+    .list {
+      margin-bottom: 0;
+      ul {
+        > li {
+          font-size: 16px;
+          line-height: 26px;
+          padding-left: 15px;
+          height: 26px;
+          margin-bottom: 0;
+          i {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+  .nav {
+    &.navbar-nav {
+      width: 100vw;
+      padding-top: 26px;
+      > li {
+        float: left;
+        width: 33%;
+        text-align: center;
+      }
+    }
+  }
+  footer {
+    .mail {
+      top: -78px;
+    }
+  }
 }
